@@ -1,0 +1,55 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">آگهی های من</h3>
+
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+            </button>
+
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body" >
+        <div class="table-responsive">
+            <table class="table no-margin">
+                <thead>
+                    <tr>
+                        <th>تصویر</th>
+                        <th>برند</th>
+                        <th>مدل</th>
+                        <th>قیمت</th>
+                        <th>تاریخ ارسال</th>
+
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr ng-repeat="Item in ListAllTickets">
+                        <td><img class="img-rounded" style="position:center; width: 220px; height: 140px;" ng-src="@Url.Content("~/FileArchive/{{Item.Img_Url}}")" alt="..."></td>
+                        <td><a href="pages/examples/invoice.html">{{Item.Brand}}</a></td>
+                        <td>آیفون ۵</td>
+                        <td><span class="label label-success">{{Item.Model}}</span></td>
+                        <td>
+                            <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                        </td>
+                        <td><input type="button" class="btn btn-outline-info" value="ویرایش" /></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+
+
+    </div>
+    <!-- /.box-footer -->
+</div>
+
+@section DeclareJS{
+
+
+    <script src="~/Assets/js/JSTickets.js"></script>
+}

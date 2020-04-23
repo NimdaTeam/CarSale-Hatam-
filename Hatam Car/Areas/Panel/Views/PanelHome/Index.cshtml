@@ -1,0 +1,120 @@
+﻿<!-- Content Wrapper. Contains page content -->
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            داشبورد
+            <small>کنترل پنل</small>
+        </h1>
+        
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>150</h3>
+
+                        <p>آگهی جدید</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-th"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">همه آگهی ها <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>ثبت آگهی</h3>
+
+                        <p>ثبت آگهی جدید</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-ticket"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">ثبت آگهی جدید <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>65</h3>
+
+                        <p>آگهی های من</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-ios-paper"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">مشاهده آگهی های ثبت شده <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-blue-gradient">
+                    <div class="inner">
+                        <h3>44</h3>
+
+                        <p>اصلاح مشخصات کاربری</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">ورود به بخش مدیریت حساب کاربری <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6" id="Users">
+                <!-- small box -->
+                <div class="small-box bg-yellow" >
+                    <div class="inner">
+                        <h3>44</h3>
+
+                        <p>کاربران ثبت شده</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-stalker"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">مشاهده کاربران ثبت شده <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6" id="Tickets" ng-if="@Session["Sess_UserRole"]=="UserAddi">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>مدیریت</h3>
+
+                        <p>مدیریت آگهی ها</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-android-options"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">ورود به بخش مدیریت آگهی ها<i class="fa fa-arrow-circle-left"></i></a>
+                </div >
+            </div>
+            <!-- ./col -->
+
+        </div>
+        <!-- /.row -->
+       
+    
+
+    </section>
+    <!-- /.content -->
+<script>
+    if (@Session["Sess_UserRole"]== false) {
+        document.getElementById('Users').style.visibility = false;
+        document.getElementById('Tickets').style.visibility = false;
+
+    }
+</script>

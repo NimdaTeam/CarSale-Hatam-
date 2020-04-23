@@ -1,0 +1,195 @@
+﻿
+<div class="box-body">
+    <h1 class="titleFont text-center">ثبت آگهی</h1>
+
+</div>
+
+<div class="box-body">
+
+
+
+    <div>
+        <div>
+            <p class="AllFont">آپلود عکس</p>
+        </div>
+        <div id="dropzone2" class="dropzone sm" options="dz_PersImageOptions" methods="dz_PersImageMethods" callbacks="dzCallbacks" ng-dropzone></div>
+
+    </div>
+</div>
+
+
+
+<div class="box-body">
+
+
+
+    <div>
+        <div>
+            <p class="AllFont">برند</p>
+        </div>
+
+        <div class="col-xs-5">
+            <input type="text" ng-model="Brand" class="form-control" placeholder="ایران خودرو/سایپا/کیا">
+        </div>
+    </div>
+</div>
+<div class="box-body">
+    <div>
+        <div>
+            <p class="AllFont">مدل</p>
+        </div>
+
+        <div class="col-xs-5">
+            <input type="text" ng-model="Model" class="form-control" placeholder="پژو 405/پراید132/سورنتو">
+        </div>
+    </div>
+</div>
+<div class="box-body">
+    <div>
+        <div>
+            <p class="AllFont">سال تولید</p>
+        </div>
+
+        <div class="col-xs-5">
+            <input type="text" ng-model="Year" class="form-control" placeholder="..13">
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>استان</label>
+    <select id="State" class="form-control AllFont">
+
+        <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+        <option value="آذربایجان غربی">آذربایجان غربی</option>
+        <option value="اردبیل">اردبیل</option>
+        <option value="البرز">البرز</option>
+        <option value="ایلام">ایلام</option>
+        <option value="بوشهر">بوشهر</option>
+        <option value="تهران">تهران</option>
+        <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
+        <option value="خراسان جنوبی">خراسان جنوبی</option>
+        <option value="خراسان رضوی">خراسان رضوی</option>
+        <option value="خراسان شمالی">خراسان شمالی</option>
+        <option value="خوزستان">خوزستان</option>
+        <option value="زنجان">زنجان</option>
+        <option value="سمنان">سمنان</option>
+        <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+        <option value="فارس">فارس</option>
+        <option value="قزوین">قزوین</option>
+        <option value="قم">قم</option>
+        <option value="کردستان">کردستان</option>
+        <option value="کرمان"> کرمان</option>
+        <option value="کرمانشاه">کرمانشاه</option>
+        <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+        <option value="گلستان">گلستان</option>
+        <option value="گیلان">گیلان</option>
+        <option value="لرستان">لرستان</option>
+        <option value="مازندران">مازندران</option>
+        <option value="مرکزی">مرکزی</option>
+        <option value="هرمزگان">هرمزگان</option>
+        <option value="همدان">همدان</option>
+        <option value="یزد">یزد</option>
+    </select>
+</div>
+<div class="box-body">
+    <label>موبایل</label>
+
+    <div class="input-group">
+        <div class="input-group-addon">
+            <i class="fa fa-phone"></i>
+        </div>
+        <input type="text" ng-model="PhoneNumber" class="form-control">
+    </div>
+    <!-- /.input group -->
+</div>
+<div class="box-body">
+    <label>قیمت</label>
+
+    <div class="input-group">
+        <div class="input-group-addon">
+            <i class="fa fa-money"></i>
+        </div>
+        <input type="number" ng-model="Price" class="form-control">
+    </div>
+    <!-- /.input group -->
+</div>
+<form class="box-body" id="demoForm">
+    <label>نوع وسیله نقلیه</label>
+    <div class="radio">
+        <label>
+            <input type="radio" ng-model="new" name="optionsRadios" id="optionsRadios1" value="خودرو صفر" checked>
+            خودرو صفر
+        </label>
+        <br />
+        <label>
+            <input type="radio" ng-model="old" name="optionsRadios" id="optionsRadios1" value="خودرو کارکرده" checked>
+            خودرو کارکرده
+        </label>
+        <br />
+        <label>
+            <input type="radio" ng-model="classic" name="optionsRadios" id="optionsRadios1" value="خودرو کلاسیک" checked>
+            خودرو کلاسیک
+        </label>
+        <br />
+        <label>
+            <input type="radio" ng-model="heavy" name="optionsRadios" id="optionsRadios1" value="خودرو سنگین" checked>
+            خودرو سنگین
+        </label>
+        <br />
+        <label>
+            <input type="radio" ng-model="agriculture" name="optionsRadios" id="optionsRadios1" value="ماشین آلات کشاورزی" checked>
+            ماشین آلات کشاورزی
+        </label>
+        <br />
+        <label>
+            <input type="radio" ng-model="pickup" name="optionsRadios" id="optionsRadios1" value="وانت بار" checked>
+            وانت بار
+        </label>
+    </div>
+
+
+    <!-- textarea -->
+    <div class="box-body">
+        <div class="form-group">
+            <label>اطلاعات وسیله نقلیه</label>
+            <textarea ng-model="Desc" class="form-control" rows="3" placeholder="وضعیت فنی / کارکرد / نوع سوخت مصرفی و ..."></textarea>
+        </div>
+
+    </div>
+
+    <input type="submit" onclick="GetSelectedValue()" ng-click="FunctionSave()" class="btn btn-success" value="ثبت آگهی" dir="ltr" />
+</form>
+<script language="javascript" type="text/javascript">
+<!--        //
+   
+  //گرفتن مقدار عبارت انتخاب شده در قسمت نوع خودرو و ارسال به قسمت سیو
+   (function (){
+    var radios = document.getElementsByName('optionsRadios');
+    console.log(radios);
+    for(var i = 0; i < radios.length; i++){
+        radios[i].onclick = function(){
+            sessionStorage.Type = this.value;
+        }
+    }
+})();
+    //
+
+
+    //گرفتن مقدار انتخاب شده در قسمت استان و ارسال آن به جاوااسکریپت جهت سیو
+    function GetSelectedValue(){
+				var e = document.getElementById("State");
+				var result = e.options[e.selectedIndex].value;
+				
+        sessionStorage.State = result;
+			}
+
+    sessionStorage.UserID = @Session["Sess_UserID"];
+
+
+//-->
+</script>
+
+@section DeclareJS{
+    <script src="~/Assets/js/JSTickets.js"></script>
+}

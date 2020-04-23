@@ -1,0 +1,336 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ویسپوکار، مرجع آگهی خودرو</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/Assets/css/animate.css">
+
+    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/Assets/css/aos.css">
+
+    <link rel="stylesheet" href="~/Assets/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/Assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/Assets/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="~/Assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/Assets/css/icomoon.css">
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid px-md-4	">
+            <a class="navbar-brand" href="index.html">Wispo Car</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> منو
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto" dir="rtl">
+                    <li class="nav-item active"><a href="index.html" class="nav-link titleFont">خانه</a></li>
+                    <li class="nav-item"><a href="browsejobs.html" class="nav-link titleFont">آگهی خودرو</a></li>
+                    <li class="nav-item"><a href="#" onclick="FunctionTicket()" class="nav-link titleFont">ثبت آگهی</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link titleFont">اخبار خودرو</a></li>
+                    <li class="nav-item active AllFont"><a href="/Panel/Login" class="nav-link">حساب کاربری</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link titleFont">تماس با ما</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap img" style="background-image: url(../../Assets/images/bg_1.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-10 d-flex align-items-center ftco-animate">
+                    <div class="text text-center pt-5 mt-md-5">
+                        <p class="mb-4 AllFont">سه سوت آگهی کن ، سه سوت بفروش</p>
+                        <h1 class="mb-5 titleFont">ویسپوکار: مرجع تخصصی خرید و فروش خودرو</h1>
+                        <div class="ftco-counter ftco-no-pt ftco-no-pb">
+                            <div class="row">
+                                <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18">
+                                        <div class="text d-flex">
+                                            <div class="icon mr-2">
+                                                <span class="icon-map-marker"></span>
+                                            </div>
+                                            <div class="desc text-left">
+                                                <strong class="number numFont" data-number="31">0</strong>
+                                                <span class="AllFont">استان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text d-flex">
+                                            <div class="icon mr-2">
+                                                <span class="icon-car"></span>
+                                            </div>
+                                            <div class="desc text-left">
+                                                <strong class="number numFont" data-number="450">0</strong>
+                                                <span class="AllFont">مدل خودرو</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text d-flex">
+                                            <div class="icon mr-2">
+                                                <span class="flaticon-resume"></span>
+                                            </div>
+                                            <div class="desc text-left">
+                                                <strong class="number numFont" data-number="80000">0</strong>
+                                                <span class="AllFont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;آگهی فعال&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ftco-search my-md-5">
+                            <div class="row">
+                                <div class="col-md-12 nav-link-wrap">
+                                    <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active mr-md-1 titleFont" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">آگهی های خودرو</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 tab-wrap">
+
+                                    <div class="tab-content p-4" id="v-pills-tabContent">
+
+                                        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab" dir="rtl">
+                                            <form action="#" class="search-job">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md mr-md-2">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <div class="select-wrap">
+                                                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                                    <select name="" id="" class="form-control AllFont text-right">
+                                                                        <option value="">استان</option>
+                                                                        <option value="">آذربایجان شرقی</option>
+                                                                        <option value="">آذربایجان غربی</option>
+                                                                        <option value="">اردبیل</option>
+                                                                        <option value="">البرز</option>
+                                                                        <option value="">ایلام</option>
+                                                                        <option value="">بوشهر</option>
+                                                                        <option value="">تهران</option>
+                                                                        <option value="">چهارمحال و بختیاری</option>
+                                                                        <option value="">خراسان جنوبی</option>
+                                                                        <option value="">خراسان رضوی</option>
+                                                                        <option value="">خراسان شمالی</option>
+                                                                        <option value="">خوزستان</option>
+                                                                        <option value="">زنجان</option>
+                                                                        <option value="">سمنان</option>
+                                                                        <option value="">سیستان و بلوچستان</option>
+                                                                        <option value="">فارس</option>
+                                                                        <option value="">قزوین</option>
+                                                                        <option value="">قم</option>
+                                                                        <option value="">کردستان</option>
+                                                                        <option value="">کرمان</option>
+                                                                        <option value="">کرمانشاه</option>
+                                                                        <option value="">کهگیلویه و بویراحمد</option>
+                                                                        <option value="">گلستان</option>
+                                                                        <option value="">گیلان</option>
+                                                                        <option value="">لرستان</option>
+                                                                        <option value="">مازندران</option>
+                                                                        <option value="">مرکزی</option>
+                                                                        <option value="">هرمزگان</option>
+                                                                        <option value="">همدان</option>
+                                                                        <option value="">یزد</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md mr-md-2">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="icon-map-marker"></span></div>
+                                                                <input type="text" class="form-control AllFont text-right" placeholder="برند">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <button type="submit" class="form-control btn btn-primary AllFont">جست وجو</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                                            <form action="#" class="search-job">
+                                                <div class="row">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="icon-user"></span></div>
+                                                                <input type="text" class="form-control" placeholder="eg. Adam Scott">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <div class="select-wrap">
+                                                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option value="">Category</option>
+                                                                        <option value="">Full Time</option>
+                                                                        <option value="">Part Time</option>
+                                                                        <option value="">Freelance</option>
+                                                                        <option value="">Internship</option>
+                                                                        <option value="">Temporary</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="icon-map-marker"></span></div>
+                                                                <input type="text" class="form-control" placeholder="Location">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <div class="form-field">
+                                                                <button type="submit" class="form-control btn btn-primary">Search</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section dir="rtl" class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="category-wrap">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <div class="top-category text-center no-border-left">
+                                    <h3 class="titleFont"><a href="#">خودرو صفر</a></h3>
+                                    <span class="icon flaticon-contact"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="top-category text-center active">
+                                    <h3 class="titleFont"><a href="#">خودرو کارکرده</a></h3>
+                                    <span class="icon flaticon-mortarboard"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="top-category text-center">
+                                    <h3 class="titleFont"><a href="#">خودرو کلاسیک</a></h3>
+                                    <span class="icon flaticon-idea"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="top-category text-center">
+                                    <h3 class="titleFont"><a href="#">خودرو سنگین</a></h3>
+                                    <span class="icon flaticon-accounting"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="top-category text-center">
+                                    <h3 class="titleFont"><a href="#">موتور سیکلت</a></h3>
+                                    <span class="icon flaticon-dish"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="top-category text-center">
+                                    <h3 class="titleFont"><a href="#">موتور سنگین</a></h3>
+                                    <span class="icon flaticon-stethoscope"></span>
+                                    <p><span class="number numFont">143</span> <span class="AllFont">آگهی</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="~/Assets/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <script src="~/Assets/js/jquery.easing.1.3.js"></script>
+    <script src="~/Assets/js/jquery.waypoints.min.js"></script>
+    <script src="~/Assets/js/jquery.stellar.min.js"></script>
+    <script src="~/Assets/js/owl.carousel.min.js"></script>
+    <script src="~/Assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Assets/js/aos.js"></script>
+    <script src="~/Assets/js/jquery.animateNumber.min.js"></script>
+    <script src="~/Assets/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/Assets/js/google-map.js"></script>
+    <script src="~/Assets/js/main.js"></script>
+    <script>
+    var UserID =@Session["Sess_UserID"];
+
+    function FunctionTicket() {
+        if (UserID != 'undefined') {
+            window.location.href = ("/Panel/Login");
+        }
+        else {
+            window.location.href = ("/Panel/Ticket_Adding");
+        }
+
+    }
+    </script>
+
+</body>
+</html>
+

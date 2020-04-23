@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WispoCarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="15" />
+    <Property Name="Model" Type="nvarchar" MaxLength="20" />
+    <Property Name="Year" Type="int" />
+    <Property Name="State" Type="nvarchar" MaxLength="25" />
+    <Property Name="CallNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Report" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Role" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WispoCar.dbo.TicketViews' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TicketViews">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="15" />
+    <Property Name="Model" Type="nvarchar" MaxLength="20" />
+    <Property Name="Year" Type="int" />
+    <Property Name="State" Type="nvarchar" MaxLength="25" />
+    <Property Name="CallNumber" Type="int" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="Report" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WispoCarModelStoreContainer">
+    <EntitySet Name="Tickets" EntityType="Self.Tickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TicketViews" EntityType="Self.TicketViews" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TicketViews].[ID] AS [ID], 
+    [TicketViews].[UserID] AS [UserID], 
+    [TicketViews].[Brand] AS [Brand], 
+    [TicketViews].[Model] AS [Model], 
+    [TicketViews].[Year] AS [Year], 
+    [TicketViews].[State] AS [State], 
+    [TicketViews].[CallNumber] AS [CallNumber], 
+    [TicketViews].[Type] AS [Type], 
+    [TicketViews].[Description] AS [Description], 
+    [TicketViews].[ImgUrl] AS [ImgUrl], 
+    [TicketViews].[Report] AS [Report], 
+    [TicketViews].[Price] AS [Price], 
+    [TicketViews].[Name] AS [Name]
+    FROM [dbo].[TicketViews] AS [TicketViews]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
